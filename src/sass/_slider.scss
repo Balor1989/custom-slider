@@ -56,10 +56,11 @@ body::before {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  outline: none;
 }
 
 .button-arrow:hover .button-icon,
-.button-arrow:focus {
+.button-arrow:focus .button-icon {
   fill: rgb(150, 14, 138);
 }
 
