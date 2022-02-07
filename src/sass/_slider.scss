@@ -25,6 +25,7 @@ body::before {
   overflow: hidden;
   height: 70vh;
   width: 70vw;
+  border-radius: 20px;
 }
 
 .slide {
@@ -36,6 +37,7 @@ body::before {
   left: -15vw;
   background-position: center;
   background-size: cover;
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
 }
 .slide.slide-active {
   opacity: 1;
@@ -53,15 +55,15 @@ body::before {
 }
 
 .left-arrow {
-  left: calc(15vw - 80px);
+  left: calc(10vw - 50px);
 }
 
 .right-arrow {
-  right: calc(15vw - 80px);
+  right: calc(10vw - 50px);
 }
 
 .button-icon {
-  width: 50px;
-  height: 50px;
-  fill: rgb(231, 236, 241);
+  width: 80px;
+  height: 80px;
+  fill: rgb(218, 218, 218);
 }
