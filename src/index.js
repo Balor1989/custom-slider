@@ -8,7 +8,9 @@ console.log(slides);
 const leftArrowButton = document.querySelector('.left-arrow');
 const rightArrowButton = document.querySelector('.right-arrow');
 
-let activeSlide = 0;
+let activeSlide = JSON.parse(localStorage.getItem('activeSlide')) || 0;
+setActiveSlide();
+setBodyBackgroundImage();
 
 rightArrowButton.addEventListener('click', increaseActiveSlide);
 leftArrowButton.addEventListener('click', decreaseActiveSlide);
@@ -18,6 +20,7 @@ function increaseActiveSlide() {
   if (activeSlide > slides.length - 1) {
     activeSlide = 0;
   }
+  setBodyBackgroundImage();
   setActiveSlide();
   localStorage.setItem('activeSlide', activeSlide);
 }
@@ -27,6 +30,7 @@ function decreaseActiveSlide() {
   if (activeSlide < 0) {
     activeSlide = slides.length - 1;
   }
+  setBodyBackgroundImage();
   setActiveSlide();
   localStorage.setItem('activeSlide', activeSlide);
 }
@@ -34,4 +38,8 @@ function decreaseActiveSlide() {
 function setActiveSlide() {
   slides.forEach(slide => slide.classList.remove('slide-active'));
   slides[activeSlide].classList.add('slide-active');
+}
+
+function setBodyBackgroundImage() {
+  body.style.backgroundImage = slides[activeSlide].style.backgroundImage;
 }
