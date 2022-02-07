@@ -8,7 +8,7 @@ body {
   margin: 0;
   background-position: center;
   background-size: cover;
-  transition: all 500ms ease;
+  transition: 500ms ease;
 }
 body::before {
   content: '';
@@ -19,7 +19,7 @@ body::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.76);
   z-index: -1;
-  transition: all 500ms ease;
+  transition: 500ms ease;
 }
 
 .slider {
@@ -40,11 +40,11 @@ body::before {
   background-position: center;
   background-size: cover;
   box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
-  transition: all 500ms;
+  transition: 500ms ease;
 }
 .slide.slide-active {
   opacity: 1;
-  transition: all 500ms;
+  transition: 500ms ease;
 }
 
 .button-arrow {
@@ -56,6 +56,11 @@ body::before {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.button-arrow:hover .button-icon,
+.button-arrow:focus {
+  fill: rgb(150, 14, 138);
 }
 
 .left-arrow {
@@ -70,4 +75,5 @@ body::before {
   width: 80px;
   height: 80px;
   fill: rgb(218, 218, 218);
+  transition: 300ms ease;
 }

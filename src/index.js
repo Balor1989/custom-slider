@@ -4,7 +4,6 @@ import './sass/main.scss';
 const body = document.body;
 
 const slides = document.querySelectorAll('.slide');
-console.log(slides);
 const leftArrowButton = document.querySelector('.left-arrow');
 const rightArrowButton = document.querySelector('.right-arrow');
 
