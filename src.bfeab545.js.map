@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":[],"mappings":";;;AACA,aADA,QAAA,oCACA,QAAA","file":"src.bfeab545.js","sourceRoot":"../src","sourcesContent":["import '../node_modules/modern-normalize';\nimport './sass/main.scss';\n"]}
